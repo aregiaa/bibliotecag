@@ -51,19 +51,32 @@ navigation">
             </ul>
         </div>
     </nav>
+
+
     <div class="container mt-5">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Olá, é bom te ver por aqui</h1>
-            <p class="lead">Esta é a página inicial da Biblioteca</p>
-            <p class="lead">Seja Bem Vindo(A)</p>
-        </div>
+        <h2 class="mb-4">Tabela de Generos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for generos in generos %}
+                <tr>
+                    <td>{{ generos.nome }}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
     </div>
-    <!-- Incluindo jQuery e Bootstrap JS -->
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popp
-er.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.mi
-n.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

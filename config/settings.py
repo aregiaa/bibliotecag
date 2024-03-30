@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fp%b*o#rtph@e14bq9--^1*3iv0(urliw#!qf**x-1jcgm^4wh'
+SECRET_KEY = 'django-insecure-npi1yzh*v11px1uv*64h8p4^nrc!l@+r9qkpwht1a*tp4o&jfj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'APP/TEMPLATES')],
+        'DIRS':
+            [os.path.join(BASE_DIR, 'app/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,10 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'bibliotecag',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': '@Alex13400ai16jk', #123456
         'HOST': 'localhost',
-        'PORT': '5432'
-
+        'PORT': '5432',
     }
 }
 
@@ -110,8 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-
-
 LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'America/Sao_Paulo'
@@ -126,8 +124,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(STATIC_URL, 'static')
-STATICFELIS_DIRS = [
-    os.path.join(BASE_DIR, 'app/static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'app/static'),
 ]
 
 # Default primary key field type
